@@ -2,7 +2,7 @@
 
 Realizado automação usando framework Cypress.
 
-- Realizar validação da tela HOME
-- Realizar cadastro de login
-- Realizar fluxo de deslogar
-- Realizar validação dos menus
+- Realizado fluxo de acessar tela HOME
+- Realizado fluxo cadastro de login
+- Realizado fluxo de deslogar
+- Realizado validação dos menus
