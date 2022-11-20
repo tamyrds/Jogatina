@@ -3,7 +3,7 @@ import { elem } from "./pageObjet"
  Cypress.Commands.add('login', (email,senha) =>{
     const user = {
         
-        email:'saken70053@kixotic.com',
+        email:'saken70053@kixotic.com',  
         senha:'teste123',
     }
     cy.get(elem.email)
@@ -13,6 +13,7 @@ import { elem } from "./pageObjet"
     cy.get(elem.criarConta).click()
     },
  )
+
     Cypress.Commands.add('logar', (email,senha) =>{
     const logar = {
         

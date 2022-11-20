@@ -3,12 +3,15 @@
 import login from "../support/pageObject/login";
 import { elem } from "../support/pageObjet";
 
+/**
+ * Login e senha estão no arquivo commands.js
+ */
 
 describe('Validar site jogatina', () => {
-  beforeEach(() => { //Deve rodar esse teste primeiro antes de começar o restante.
+  beforeEach(() => { 
     cy.visit(Cypress.env('URL'))
     cy.viewport(1536, 960)
-    cy.title('Jogatina')// Realiza a validação do titulo.
+    cy.title('Jogatina')
   })
 
   it('Validar fluxo de cadastro', () => {

@@ -13,32 +13,44 @@ class login{
         //cy.contains('Usuario deslogado com sucesso.')
     }
 
+//Deve clicar no menu JOGAR
     menuJogar(){
-        cy.get(elem.jogar) //Deve clicar no menu JOGAR
+        cy.get(elem.jogar) 
           .contains('Jogar ')
           .click()
         cy.contains('Para continuar, acesse sua conta ou faça um cadastro rápido no Jogatina.com')
     }
+/**
+ * Deve clicar no menu Nossos Jogos
+ */
 
     nossosJogos(){
-        cy.get(elem.nossosJogos) //Deve clicar no menu Nossos Jogos
+        cy.get(elem.nossosJogos) 
           .contains('Nossos jogos')
           .click()
         cy.contains('Nossos Jogos')
     }
+/**
+ * Deve clicar no menu Nossos Jogos
+ * E realiza validação do titulo da pagina para confirmação.
+ */
 
     nossosApp(){
-        cy.get(elem.nossosAplicativos) //Deve clicar no menu Nossos Jogos
+        cy.get(elem.nossosAplicativos) 
           .contains('Nossos aplicativos')
           .click()
         cy.title('Jogos de carta para celulares e tablets! Jogatina Apps')
     }
+/**
+ * Deve clicar no menu MAIS
+ * Faz a validação dos submenus.
+ */
 
     menuMais(){
-        cy.get(elem.mais) //Deve clicar no menu MAIS
+        cy.get(elem.mais) 
           .contains('Mais ')
           .trigger('mousemove')
-         cy.contains('Suporte') //Faz a validação dos submenus.
+         cy.contains('Suporte') 
          cy.contains('Acordo de utilização')
          cy.contains('Política de privacidade')
          cy.contains('Mapa do site')
