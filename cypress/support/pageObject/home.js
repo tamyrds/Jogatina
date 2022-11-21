@@ -20,7 +20,7 @@ class home{
         cy.contains('Selecione o plano que você deseja')
         cy.get(elem.anual)
           .should('be.visible', 'Anual')
-          
+          .click()
     }
 
 //Deve clicar no menu JOGAR
