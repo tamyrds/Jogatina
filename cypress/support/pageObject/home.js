@@ -2,7 +2,7 @@
 
 import { elem } from "../pageObjet"
 
-class login{
+class home{
 
     logoff(){
         cy.get(elem.profile)
@@ -11,6 +11,16 @@ class login{
                 
                 .click({force: true} )
         //cy.contains('Usuario deslogado com sucesso.')
+    }
+
+    sejaVip(){
+        cy.get(elem.sejaVip)
+          .contains('Seja Vip!')
+          .click()
+        cy.contains('Selecione o plano que você deseja')
+        cy.get(elem.anual)
+          .should('be.visible', 'Anual')
+          .click()
     }
 
 //Deve clicar no menu JOGAR
@@ -60,4 +70,4 @@ class login{
     }
 
 
-export default new login
+export default new home

@@ -13,4 +13,6 @@ export const elem = {
     jogar: 'li a[class="header__nav-link"]',
     nossosJogos: 'li a[class="header__nav-link"]',
     nossosAplicativos: 'li a[class="header__nav-link"]',
+    sejaVip: 'li a[class="header__nav-item--btn-vip-link btn"]',
+    anual:'a[class="box-plan js-change-step js-select-plan box-plan--favorite"]'
 }

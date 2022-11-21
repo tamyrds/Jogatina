@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import login from "../support/pageObject/login";
+import home from "../support/pageObject/home";
 import { elem } from "../support/pageObjet";
 
 /**
@@ -16,35 +16,37 @@ describe('Validar site jogatina', () => {
 
   it('Validar fluxo de cadastro', () => {
       cy.get(elem.cadastre)
-        .click() //Deve clicar no botão cadastre-se
-        .wait(10)
+        .click() 
         .should('be.visible', 'Cadastre-se agora mesmo!')
-        .wait(20)
       cy.login() //Deve realizar cadastro com email/senha
       
   });
-  it.only('Deve deslogar do sistema', () => {
+  it('Deve deslogar do sistema', () => {
     cy.once('uncaught:exception', () => false);
       cy.logar()
-      login.logoff()// Deve deslogar do sistema.
+      home.logoff()// Deve deslogar do sistema.
   });
 
-  it.only('Deve validar menu Jogar', () => {
-    login.menuJogar()
+  it.only('Deve validar fluxo Seja Vip', () => {
+    cy.logar()
+      home.sejaVip()
   });
 
-  it.only('Deve validar menu Nossos Jogos', () => {
+  it('Deve validar menu Jogar', () => {
+    home.menuJogar()
+  });
+
+  it('Deve validar menu Nossos Jogos', () => {
     login.nossosJogos()
   });
 
-  it.only('Deve validar menu Nossos aplicativos', () => {
-    login.nossosApp()
+  it('Deve validar menu Nossos aplicativos', () => {
+    home.nossosApp()
   });
 
-  it.only('Deve validar menu Mais', () => {
-    login.menuMais()
+  it('Deve validar menu Mais', () => {
+    home.menuMais()
   });
 
-  test
 
 })
