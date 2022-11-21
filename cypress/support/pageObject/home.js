@@ -21,6 +21,8 @@ class home{
         cy.get(elem.anual)
           .should('be.visible', 'Anual')
           .click()
+        cy.get(elem.cartaoCredito).click()
+        cy.credito()
     }
 
 //Deve clicar no menu JOGAR

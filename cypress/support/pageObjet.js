@@ -14,5 +14,13 @@ export const elem = {
     nossosJogos: 'li a[class="header__nav-link"]',
     nossosAplicativos: 'li a[class="header__nav-link"]',
     sejaVip: 'li a[class="header__nav-item--btn-vip-link btn"]',
-    anual:'a[class="box-plan js-change-step js-select-plan box-plan--favorite"]'
+    anual:'a[class="box-plan js-change-step js-select-plan box-plan--favorite"]',
+    cartaoCredito:'a[id="creditcard"]',
+    numeroCredito:'input[id="cardNumber"]',
+    nomeCredito:'input[id="cardName"]',
+    validade:'select[id="expirationMonth"]',
+    anoCartao:'select[id="expirationYear"]',
+    CVV:'input[id="cardCSEG"]',
+    assinar:'button[class="btn btn-primary float-right js-btn-submit-form"]'
+
 }

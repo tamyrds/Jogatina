@@ -27,3 +27,21 @@ import { elem } from "./pageObjet"
         //cy.contains('Usuario cadastrado com sucesso')
 },
     )
+    Cypress.Commands.add('credito',() =>{
+        const credito ={
+            nome: 'Teste Jogatina',
+            numero: '5141 5253 0766 6813',
+            //validade: '21/04/2',
+            ano: '24',
+            CVV: '527'
+        }
+        cy.get(elem.numeroCredito).type(credito.numero)
+        cy.get(elem.nomeCredito).type(credito.nome)
+        cy.get(elem.validade).select('04')
+        cy.get(elem.anoCartao).select('2024')
+        cy.get(elem.CVV).type(credito.CVV)
+        cy.get(elem.assinar).click()
+            .should('be.visible', 'Processando')
+
+    },
+    )
