@@ -9,4 +9,4 @@
 
 > 3 - Rodar o Cypress pelo comando npx cypress open
 
-> 4 - Deve abrir o cypress (Encaminho o video de como rodar)
+> 4 - Deve abrir o cypress
