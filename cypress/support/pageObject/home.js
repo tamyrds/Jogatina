@@ -5,6 +5,7 @@ import { elem } from "../pageObjet"
 class home{
 
     logoff(){
+      
         cy.get(elem.profile)
             .trigger('mousemove')
         cy.contains('Sair')
@@ -13,6 +14,9 @@ class home{
         //cy.contains('Usuario deslogado com sucesso.')
     }
 
+/**
+ * Realiza o fluxo de pagamento do SEJA VIP
+ */    
     sejaVip(){
         cy.get(elem.sejaVip)
           .contains('Seja Vip!')

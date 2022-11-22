@@ -5,6 +5,7 @@ import { elem } from "../support/pageObjet";
 
 /**
  * Login e senha estão no arquivo commands.js
+ * Dados do cartão estão em commands.js
  */
 
 describe('Validar site jogatina', () => {
