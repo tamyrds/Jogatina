@@ -6,7 +6,7 @@ import { elem } from "./pageObjet"
         email:'saken70053@kixotic.com',  
         senha:'teste123',
     }
-    cy.get(elem.email)
+    cy.get('#emailIn')
         .type(user.email)
     cy.get(elem.senha)
         .type(user.senha)
